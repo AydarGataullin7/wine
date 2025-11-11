@@ -16,7 +16,7 @@ def get_year_form(year):
 
 def get_excel_data():
     excel_data = pandas.read_excel(
-        'wine3.xlsx', na_values='', keep_default_na=False)
+        'assortment_of_wines.xlsx', na_values='', keep_default_na=False)
     excel_data = excel_data.fillna('')
     wines = excel_data.to_dict('records')
     return wines
