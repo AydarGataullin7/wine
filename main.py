@@ -38,7 +38,8 @@ def main():
     )
     wines_data = get_excel_data()
     template = env.get_template('template.html')
-    years_count = datetime.now().year - 1920
+    established_year = 1920
+    years_count = datetime.now().year - established_year
     year_form = get_year_form(years_count)
     rendered_page = template.render(
         years=years_count,
