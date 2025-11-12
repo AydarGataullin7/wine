@@ -36,5 +36,5 @@ ehthumbs.db
 Thumbs.db
 
 
-index.html  # сгенерированный файл
-template_cap/  # временные шаблоны
+index.html
+template_cap/
