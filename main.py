@@ -28,7 +28,7 @@ def get_excel_data(file_path):
     return wines
 
 
-def get_wines_category(wines):
+def group_wines_by_category(wines):
     wines_by_category = defaultdict(list)
     for wine in wines:
         category = wine['Категория']
@@ -68,7 +68,7 @@ def main():
     rendered_page = template.render(
         years=years_count,
         year_form=year_form,
-        wines=get_wines_category(wines=wines_data)
+        wines=group_wines_by_category(wines=wines_data)
     )
     with open('index.html', 'w', encoding="utf8") as file:
         file.write(rendered_page)
